@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" modified="2026-05-12T22:45:00.000Z" agent="5.0" version="24.4.8" type="device">
+  <diagram name="UyarLib Relational Schema" id="relational-1">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="UyarLib - İlişkisel Şema (Relational Schema)" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fillColor=#e3f2fd;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="800" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- yazarlar Table -->
+        <mxCell id="yazarlar_table" value="yazarlar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#0277bd;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yazarlar_cols" value="yazar_id: INT [PK]&#10;ad_soyad: VARCHAR(100)" style="text;html=1;align=left;verticalAlign=top;fontSize=9;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="50" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- kategoriler Table -->
+        <mxCell id="kategoriler_table" value="kategoriler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#0277bd;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kategoriler_cols" value="kategori_id: INT [PK]&#10;kategori_adi: VARCHAR(50)" style="text;html=1;align=left;verticalAlign=top;fontSize=9;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- turler Table -->
+        <mxCell id="turler_table" value="turler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor:#0277bd;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="80" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="turler_cols" value="tur_id: INT [PK]&#10;tur_adi: CHAR(50)" style="text;html=1;align=left;verticalAlign=top;fontSize=9;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="450" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- yayin_evleri Table -->
+        <mxCell id="yayin_evleri_table" value="yayin_evleri" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor:#0277bd;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="80" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yayin_evleri_cols" value="yayinevi_id: INT [PK]&#10;yayinevi_adi: VARCHAR(100)&#10;iletisim: VARCHAR(20)" style="text;html=1;align=left;verticalAlign=top;fontSize=9;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="650" y="110" width="150" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- personel Table -->
+        <mxCell id="personel_table" value="personel" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#b3e5fc;strokeColor:#0277bd;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="80" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="personel_cols" value="personel_id: INT [PK]&#10;personel_adi: VARCHAR(100)" style="text;html=1;align=left;verticalAlign=top;fontSize=9;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="850" y="110" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- kitaplar Table (MAIN) -->
+        <mxCell id="kitaplar_table" value="kitaplar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff59d;strokeColor=#f57f17;strokeWidth=2.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="310" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="kitaplar_cols" value="kitap_id: INT [PK]&#10;isbn_no: VARCHAR(13) [UNIQUE]&#10;kitap_adi: VARCHAR(255)&#10;sayfa_sayisi: INT&#10;stok_adedi: INT [DEFAULT=0]&#10;yazar_id: INT [FK→yazarlar]&#10;kategori_id: INT [FK→kategoriler]&#10;tur_id: INT [FK→turler]&#10;yayinevi_id: INT [FK→yayin_evleri]" style="text;html=1;align=left;verticalAlign=top;fontSize=8;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="350" y="345" width="180" height="135" as="geometry" />
+        </mxCell>
+
+        <!-- uyeler Table -->
+        <mxCell id="uyeler_table" value="uyeler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="560" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uyeler_cols" value="uye_id: INT [PK]&#10;tc_kimlik: VARCHAR(11) [UNIQUE]&#10;ad: VARCHAR(50)&#10;soyad: VARCHAR(50)&#10;kayit_tarihi: DATE" style="text;html=1;align=left;verticalAlign=top;fontSize=8;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="50" y="595" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- odunc_islemleri Table (MAIN) -->
+        <mxCell id="odunc_islemleri_table" value="odunc_islemleri" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=2.5;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="560" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="odunc_islemleri_cols" value="islem_id: INT [PK]&#10;uye_id: INT [FK→uyeler]&#10;kitap_id: INT [FK→kitaplar]&#10;personel_id: INT [FK→personel]&#10;verilis_tarihi: DATE&#10;teslim_tarihi: DATE [NULL]&#10;durum: VARCHAR(20) [CHECK]" style="text;html=1;align=left;verticalAlign=top;fontSize=8;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="350" y="595" width="180" height="115" as="geometry" />
+        </mxCell>
+
+        <!-- gecikenler Table -->
+        <mxCell id="gecikenler_table" value="gecikenler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd0;strokeColor=#c2185b;strokeWidth=2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="560" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="gecikenler_cols" value="gecikme_id: INT [PK]&#10;islem_id: INT [FK→odunc_islemleri]&#10;geciken_gun_sayisi: INT [CHECK>0]&#10;kisitlama_durumu: VARCHAR(50)" style="text;html=1;align=left;verticalAlign=top;fontSize=8;fontFamily=monospace;" vertex="1" parent="1">
+          <mxGeometry x="700" y="595" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- RELATIONSHIP ARROWS -->
+
+        <!-- yazarlar → kitaplar (1:N) -->
+        <mxCell id="rel1" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d32f2f;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="yazarlar_table" target="kitaplar_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- kategoriler → kitaplar (1:N) -->
+        <mxCell id="rel2" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d32f2f;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="kategoriler_table" target="kitaplar_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- turler → kitaplar (1:N) -->
+        <mxCell id="rel3" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d32f2f;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="turler_table" target="kitaplar_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- yayin_evleri → kitaplar (1:N) -->
+        <mxCell id="rel4" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d32f2f;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="yayin_evleri_table" target="kitaplar_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- kitaplar → odunc_islemleri (1:N) -->
+        <mxCell id="rel5" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="kitaplar_table" target="odunc_islemleri_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- uyeler → odunc_islemleri (1:N) -->
+        <mxCell id="rel6" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="uyeler_table" target="odunc_islemleri_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- personel → odunc_islemleri (1:N) -->
+        <mxCell id="rel7" value="1:N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor:#1976d2;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="personel_table" target="odunc_islemleri_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- odunc_islemleri → gecikenler (1:1) -->
+        <mxCell id="rel8" value="1:1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7b1fa2;strokeWidth=2;endArrow=crow;startArrow=none;" edge="1" parent="1" source="odunc_islemleri_table" target="gecikenler_table">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend_title" value="Açıklamalar" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fillColor=#f5f5f5;rounded=1;border=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="80" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend1" value="[PK] = Primary Key (Birincil Anahtar)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="120" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend2" value="[FK→tablo] = Foreign Key (Yabancı Anahtar)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="150" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend3" value="1:N = Bir-çok ilişki (One-to-Many)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="180" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend4" value="1:1 = Bir-bir ilişki (One-to-One)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="210" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend5" value="UNIQUE = Benzersiz değer (tekrar etmemeli)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="240" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend6" value="CHECK = Sınırlama kuralı (Constraint)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="270" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend7" value="NULL = Boş değer kabul edilebilir" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="300" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Color Legend -->
+        <mxCell id="color_title" value="Tablo Kategorileri" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fillColor=#f5f5f5;rounded=1;border=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="360" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="color1" value="■ Mavi: Referans Tabloları (yazarlar, kategoriler, turler, yayin_evleri, personel, uyeler)" style="text;html=1;align=left;fontSize=10;fillColor=#b3e5fc;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="400" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="color2" value="■ Sarı: Ana Tablo (kitaplar)" style="text;html=1;align=left;fontSize=10;fillColor=#fff59d;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="440" width="520" height="30" as="geometry" />
+        </Cell>
+
+        <mxCell id="color3" value="■ Turuncu: İşlem Tablosu (odunc_islemleri)" style="text;html=1;align=left;fontSize=10;fillColor=#ffccbc;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="480" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="color4" value="■ Pembe: Yardımcı Tablo (gecikenler)" style="text;html=1;align=left;fontSize=10;fillColor=#f8bbd0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="520" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Normalization Info -->
+        <mxCell id="norm_title" value="Normalizasyon Durumu" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fillColor=#c8e6c9;rounded=1;border=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="580" width="520" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="norm1" value="✓ 1NF (Birinci Normal Form): Tüm değerler atomiktir" style="text;html=1;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="620" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="norm2" value="✓ 2NF (İkinci Normal Form): Anahtar olmayan öznitelikler tam bağımlıdır" style="text;html=1;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="650" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="norm3" value="✓ 3NF (Üçüncü Normal Form): Geçişli bağımlılık yoktur" style="text;html=1;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="680" width="520" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="norm4" value="✓ BCNF: Her determinant bir aday anahtardır" style="text;html=1;align=left;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="710" width="520" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
