@@ -1,230 +1,167 @@
-<mxfile host="app.diagrams.net" modified="2026-05-12T22:30:00.000Z" agent="5.0" version="24.4.8" type="device">
+<mxfile host="app.diagrams.net" agent="5.0">
   <diagram name="UyarLib ER Diagram - Chen Notation" id="chen-er-1">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="2166" dy="934" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-
-        <!-- ENTITIES (Dikdörtgen) -->
-        
-        <!-- yazarlar Entity -->
-        <mxCell id="yazarlar_entity" value="yazarlar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="100" y="100" width="120" height="80" as="geometry" />
+        <mxCell id="yazarlar_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="yazarlar" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="100" as="geometry" />
         </mxCell>
-
-        <!-- kategoriler Entity -->
-        <mxCell id="kategoriler_entity" value="kategoriler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="320" y="100" width="120" height="80" as="geometry" />
+        <mxCell id="kategoriler_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="kategoriler" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="100" as="geometry" />
         </mxCell>
-
-        <!-- turler Entity -->
-        <mxCell id="turler_entity" value="turler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="540" y="100" width="120" height="80" as="geometry" />
+        <mxCell id="turler_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="turler" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="100" as="geometry" />
         </mxCell>
-
-        <!-- yayin_evleri Entity -->
-        <mxCell id="yayin_evleri_entity" value="yayin_evleri" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="760" y="100" width="120" height="80" as="geometry" />
+        <mxCell id="yayin_evleri_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="yayin_evleri" vertex="1">
+          <mxGeometry height="80" width="120" x="760" y="100" as="geometry" />
         </mxCell>
-
-        <!-- personel Entity -->
-        <mxCell id="personel_entity" value="personel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="980" y="100" width="120" height="80" as="geometry" />
+        <mxCell id="personel_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="personel" vertex="1">
+          <mxGeometry height="80" width="120" x="980" y="100" as="geometry" />
         </mxCell>
-
-        <!-- kitaplar Entity (Merkez Üst) -->
-        <mxCell id="kitaplar_entity" value="kitaplar" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="420" y="320" width="120" height="80" as="geometry" />
+        <mxCell id="kitaplar_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=3;" value="kitaplar" vertex="1">
+          <mxGeometry height="80" width="120" x="420" y="320" as="geometry" />
         </mxCell>
-
-        <!-- uyeler Entity -->
-        <mxCell id="uyeler_entity" value="uyeler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="100" y="520" width="120" height="80" as="geometry" />
+        <mxCell id="uyeler_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="uyeler" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="520" as="geometry" />
         </mxCell>
-
-        <!-- odunc_islemleri Entity (Merkez Alt) -->
-        <mxCell id="odunc_islemleri_entity" value="odunc_islemleri" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="420" y="520" width="120" height="80" as="geometry" />
+        <mxCell id="odunc_islemleri_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=3;" value="odunc_islemleri" vertex="1">
+          <mxGeometry height="80" width="120" x="420" y="520" as="geometry" />
         </mxCell>
-
-        <!-- gecikenler Entity -->
-        <mxCell id="gecikenler_entity" value="gecikenler" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="740" y="520" width="120" height="80" as="geometry" />
+        <mxCell id="loWjeNhQ9ydNw9-Vjcs4-1" edge="1" parent="1" source="gecikenler_entity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="630" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-
-        <!-- RELATIONSHIPS (Elmas) -->
-
-        <!-- YAZIYOR (yazarlar - kitaplar) -->
-        <mxCell id="yaziyor_rel" value="YAZIYOR" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="210" y="200" width="100" height="80" as="geometry" />
+        <mxCell id="gecikenler_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=3;" value="gecikenler" vertex="1">
+          <mxGeometry height="80" width="120" x="740" y="520" as="geometry" />
         </mxCell>
-
-        <!-- KATEGORIYE_AIT (kategoriler - kitaplar) -->
-        <mxCell id="kategoriye_ait_rel" value="KATEGORIYE&#10;AIT" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="360" y="200" width="100" height="80" as="geometry" />
+        <mxCell id="yaziyor_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" value="YAZIYOR" vertex="1">
+          <mxGeometry height="80" width="100" x="170" y="210" as="geometry" />
         </mxCell>
-
-        <!-- TÜR_AIT (turler - kitaplar) -->
-        <mxCell id="tur_ait_rel" value="TÜR_AIT" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="570" y="200" width="100" height="80" as="geometry" />
+        <mxCell id="kategoriye_ait_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;fontSize=10;" value="KATEGORIYE&#xa;AIT" vertex="1">
+          <mxGeometry height="80" width="100" x="320" y="190" as="geometry" />
         </mxCell>
-
-        <!-- YAYINLADI (yayin_evleri - kitaplar) -->
-        <mxCell id="yayinladi_rel" value="YAYINLADI" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="780" y="200" width="100" height="80" as="geometry" />
+        <mxCell id="tur_ait_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" value="TÜR_AIT" vertex="1">
+          <mxGeometry height="80" width="100" x="570" y="200" as="geometry" />
         </mxCell>
-
-        <!-- ALIYOR (uyeler - odunc_islemleri) -->
-        <mxCell id="aliyor_rel" value="ALIYOR" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="240" y="420" width="100" height="80" as="geometry" />
+        <mxCell id="yayinladi_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=2;" value="YAYINLADI" vertex="1">
+          <mxGeometry height="80" width="100" x="800" y="190" as="geometry" />
         </mxCell>
-
-        <!-- ODUNC_VERIYOR (personel - odunc_islemleri) -->
-        <mxCell id="odunc_veriyor_rel" value="ODUNC&#10;VERIYOR" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="620" y="420" width="100" height="80" as="geometry" />
+        <mxCell id="aliyor_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2;" value="ALIYOR" vertex="1">
+          <mxGeometry height="80" width="100" x="240" y="420" as="geometry" />
         </mxCell>
-
-        <!-- ODUNC_ALIR (kitaplar - odunc_islemleri) -->
-        <mxCell id="odunc_alir_rel" value="ODUNC&#10;ALIR" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor:#2e7d32;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="420" y="410" width="100" height="80" as="geometry" />
+        <mxCell id="odunc_veriyor_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2;fontSize=10;" value="ODUNC&#xa;VERIYOR" vertex="1">
+          <mxGeometry height="80" width="100" x="620" y="420" as="geometry" />
         </mxCell>
-
-        <!-- GECIKTI (odunc_islemleri - gecikenler) -->
-        <mxCell id="gecikti_rel" value="GECIKTI" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="600" y="550" width="100" height="80" as="geometry" />
+        <mxCell id="odunc_alir_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor:#2e7d32;strokeWidth=2;fontSize=10;" value="ODUNC&#xa;ALIR" vertex="1">
+          <mxGeometry height="80" width="100" x="410" y="420" as="geometry" />
         </mxCell>
-
-        <!-- ATTRIBUTES (Elips) -->
-
-        <!-- yazarlar attributes -->
-        <mxCell id="attr_yazar_id" value="yazar_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="gecikti_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffccbc;strokeColor=#d84315;strokeWidth=2;" value="GECIKTI" vertex="1">
+          <mxGeometry height="80" width="100" x="600" y="590" as="geometry" />
         </mxCell>
-        <mxCell id="attr_ad_soyad" value="ad_soyad" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_yazar_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" value="yazar_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="30" y="20" as="geometry" />
         </mxCell>
-
-        <!-- kategoriler attributes -->
-        <mxCell id="attr_kategori_id" value="kategori_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="270" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_ad_soyad" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" value="ad_soyad" vertex="1">
+          <mxGeometry height="50" width="80" x="140" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="attr_kategori_adi" value="kategori_adi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_kategori_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" value="kategori_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="250" y="30" as="geometry" />
         </mxCell>
-
-        <!-- turler attributes -->
-        <mxCell id="attr_tur_id" value="tur_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="490" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_kategori_adi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" value="kategori_adi" vertex="1">
+          <mxGeometry height="50" width="80" x="380" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="attr_tur_adi" value="tur_adi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="590" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_tur_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="tur_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="490" y="20" as="geometry" />
         </mxCell>
-
-        <!-- yayin_evleri attributes -->
-        <mxCell id="attr_yayinevi_id" value="yayinevi_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_tur_adi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="tur_adi" vertex="1">
+          <mxGeometry height="50" width="80" x="590" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="attr_yayinevi_adi" value="yayinevi_adi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="810" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_yayinevi_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="yayinevi_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="710" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="attr_iletisim" value="iletisim" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="860" y="40" width="70" height="45" as="geometry" />
+        <mxCell id="attr_yayinevi_adi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="yayinevi_adi" vertex="1">
+          <mxGeometry height="50" width="80" x="810" y="20" as="geometry" />
         </mxCell>
-
-        <!-- personel attributes -->
-        <mxCell id="attr_personel_id" value="personel_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="930" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_iletisim" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="iletisim" vertex="1">
+          <mxGeometry height="45" width="70" x="890" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="attr_personel_adi" value="personel_adi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1030" y="20" width="80" height="50" as="geometry" />
+        <mxCell id="attr_personel_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="personel_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="960" y="20" as="geometry" />
         </mxCell>
-
-        <!-- kitaplar attributes -->
-        <mxCell id="attr_kitap_id" value="kitap_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="260" width="80" height="50" as="geometry" />
+        <mxCell id="attr_personel_adi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="personel_adi" vertex="1">
+          <mxGeometry height="50" width="80" x="1070" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="attr_isbn" value="isbn_no" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="260" width="70" height="50" as="geometry" />
+        <mxCell id="attr_kitap_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor=#558b2f;strokeWidth=1;" value="kitap_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="300" y="350" as="geometry" />
         </mxCell>
-        <mxCell id="attr_kitap_adi" value="kitap_adi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="260" width="70" height="50" as="geometry" />
+        <mxCell id="attr_isbn" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="isbn_no" vertex="1">
+          <mxGeometry height="50" width="70" x="470" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="attr_sayfa" value="sayfa_sayisi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="650" y="260" width="80" height="50" as="geometry" />
+        <mxCell id="attr_kitap_adi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="kitap_adi" vertex="1">
+          <mxGeometry height="50" width="70" x="590" y="340" as="geometry" />
         </mxCell>
-        <mxCell id="attr_stok" value="stok_adedi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="750" y="260" width="80" height="50" as="geometry" />
+        <mxCell id="attr_sayfa" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="sayfa_sayisi" vertex="1">
+          <mxGeometry height="50" width="80" x="690" y="215" as="geometry" />
         </mxCell>
-
-        <!-- uyeler attributes -->
-        <mxCell id="attr_uye_id" value="uye_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="30" y="440" width="80" height="50" as="geometry" />
+        <mxCell id="attr_stok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="stok_adedi" vertex="1">
+          <mxGeometry height="50" width="80" x="750" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="attr_tc" value="tc_kimlik" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="30" y="500" width="75" height="45" as="geometry" />
+        <mxCell id="attr_uye_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="uye_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" y="470" as="geometry" />
         </mxCell>
-        <mxCell id="attr_ad" value="ad" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="440" width="50" height="45" as="geometry" />
+        <mxCell id="attr_tc" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="tc_kimlik" vertex="1">
+          <mxGeometry height="45" width="75" x="10" y="575" as="geometry" />
         </mxCell>
-        <mxCell id="attr_soyad" value="soyad" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="185" y="440" width="60" height="45" as="geometry" />
+        <mxCell id="attr_ad" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="ad" vertex="1">
+          <mxGeometry height="45" width="50" x="80" y="410" as="geometry" />
         </mxCell>
-        <mxCell id="attr_kayit_tarihi" value="kayit_tarihi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="500" width="80" height="50" as="geometry" />
+        <mxCell id="attr_soyad" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="soyad" vertex="1">
+          <mxGeometry height="45" width="60" x="170" y="410" as="geometry" />
         </mxCell>
-
-        <!-- odunc_islemleri attributes -->
-        <mxCell id="attr_islem_id" value="islem_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="440" width="80" height="50" as="geometry" />
+        <mxCell id="attr_kayit_tarihi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="kayit_tarihi" vertex="1">
+          <mxGeometry height="50" width="80" x="150" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="attr_verilis" value="verilis_tarihi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="440" width="80" height="50" as="geometry" />
+        <mxCell id="attr_islem_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="islem_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="320" y="590" as="geometry" />
         </mxCell>
-        <mxCell id="attr_teslim" value="teslim_tarihi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="570" y="440" width="80" height="50" as="geometry" />
+        <mxCell id="attr_verilis" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="verilis_tarihi" vertex="1">
+          <mxGeometry height="50" width="80" x="440" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="attr_durum" value="durum" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="360" width="60" height="45" as="geometry" />
+        <mxCell id="attr_teslim" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="teslim_tarihi" vertex="1">
+          <mxGeometry height="50" width="80" x="580" y="525" as="geometry" />
         </mxCell>
-
-        <!-- gecikenler attributes -->
-        <mxCell id="attr_gecikme_id" value="gecikme_id (PK)" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="690" y="440" width="80" height="50" as="geometry" />
+        <mxCell id="attr_durum" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="durum" vertex="1">
+          <mxGeometry height="45" width="60" x="520" y="445" as="geometry" />
         </mxCell>
-        <mxCell id="attr_gun_sayisi" value="geciken_gun_sayisi" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="790" y="440" width="90" height="50" as="geometry" />
+        <mxCell id="attr_gecikme_id" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="gecikme_id (PK)" vertex="1">
+          <mxGeometry height="50" width="80" x="760" y="435" as="geometry" />
         </mxCell>
-        <mxCell id="attr_kisitlama" value="kisitlama_durumu" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="900" y="440" width="90" height="50" as="geometry" />
+        <mxCell id="attr_gun_sayisi" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="geciken_gun_sayisi" vertex="1">
+          <mxGeometry height="50" width="90" x="870" y="460" as="geometry" />
         </mxCell>
-
-        <!-- CONNECTING LINES -->
-
-        <!-- yazarlar to attributes -->
+        <mxCell id="attr_kisitlama" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor:#e8f5e9;strokeColor:#558b2f;strokeWidth=1;" value="kisitlama_durumu" vertex="1">
+          <mxGeometry height="50" width="90" x="950" y="510" as="geometry" />
+        </mxCell>
         <mxCell id="line_yazar_id" edge="1" parent="1" source="yazarlar_entity" target="attr_yazar_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="line_ad_soyad" edge="1" parent="1" source="yazarlar_entity" target="attr_ad_soyad">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- kategoriler to attributes -->
         <mxCell id="line_kat_id" edge="1" parent="1" source="kategoriler_entity" target="attr_kategori_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="line_kat_adi" edge="1" parent="1" source="kategoriler_entity" target="attr_kategori_adi">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- turler to attributes -->
         <mxCell id="line_tur_id" edge="1" parent="1" source="turler_entity" target="attr_tur_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="line_tur_adi" edge="1" parent="1" source="turler_entity" target="attr_tur_adi">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- yayin_evleri to attributes -->
         <mxCell id="line_yay_id" edge="1" parent="1" source="yayin_evleri_entity" target="attr_yayinevi_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -234,16 +171,12 @@
         <mxCell id="line_iletisim" edge="1" parent="1" source="yayin_evleri_entity" target="attr_iletisim">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- personel to attributes -->
         <mxCell id="line_per_id" edge="1" parent="1" source="personel_entity" target="attr_personel_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="line_per_adi" edge="1" parent="1" source="personel_entity" target="attr_personel_adi">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- kitaplar to attributes -->
         <mxCell id="line_kit_id" edge="1" parent="1" source="kitaplar_entity" target="attr_kitap_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -259,8 +192,6 @@
         <mxCell id="line_stok" edge="1" parent="1" source="kitaplar_entity" target="attr_stok">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- uyeler to attributes -->
         <mxCell id="line_uye_id" edge="1" parent="1" source="uyeler_entity" target="attr_uye_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -276,8 +207,6 @@
         <mxCell id="line_kayit" edge="1" parent="1" source="uyeler_entity" target="attr_kayit_tarihi">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- odunc_islemleri to attributes -->
         <mxCell id="line_islem_id" edge="1" parent="1" source="odunc_islemleri_entity" target="attr_islem_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -290,8 +219,6 @@
         <mxCell id="line_durum" edge="1" parent="1" source="odunc_islemleri_entity" target="attr_durum">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- gecikenler to attributes -->
         <mxCell id="line_gecikme_id" edge="1" parent="1" source="gecikenler_entity" target="attr_gecikme_id">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -301,90 +228,66 @@
         <mxCell id="line_kisit" edge="1" parent="1" source="gecikenler_entity" target="attr_kisitlama">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- RELATIONSHIP CONNECTIONS -->
-
-        <!-- yazarlar - YAZIYOR - kitaplar (1:N) -->
-        <mxCell id="rel_yazar_kit1" value="1" edge="1" parent="1" source="yazarlar_entity" target="yaziyor_rel">
+        <mxCell id="rel_yazar_kit1" edge="1" parent="1" source="yazarlar_entity" target="yaziyor_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_yazar_kit2" value="N" edge="1" parent="1" source="yaziyor_rel" target="kitaplar_entity">
+        <mxCell id="rel_yazar_kit2" edge="1" parent="1" source="yaziyor_rel" target="kitaplar_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- kategoriler - KATEGORIYE_AIT - kitaplar (1:N) -->
-        <mxCell id="rel_kat_kit1" value="1" edge="1" parent="1" source="kategoriler_entity" target="kategoriye_ait_rel">
+        <mxCell id="rel_kat_kit1" edge="1" parent="1" source="kategoriler_entity" target="kategoriye_ait_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_kat_kit2" value="N" edge="1" parent="1" source="kategoriye_ait_rel" target="kitaplar_entity">
+        <mxCell id="rel_kat_kit2" edge="1" parent="1" source="kategoriye_ait_rel" target="kitaplar_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- turler - TÜR_AIT - kitaplar (1:N) -->
-        <mxCell id="rel_tur_kit1" value="1" edge="1" parent="1" source="turler_entity" target="tur_ait_rel">
+        <mxCell id="rel_tur_kit1" edge="1" parent="1" source="turler_entity" target="tur_ait_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_tur_kit2" value="N" edge="1" parent="1" source="tur_ait_rel" target="kitaplar_entity">
+        <mxCell id="rel_tur_kit2" edge="1" parent="1" source="tur_ait_rel" target="kitaplar_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- yayin_evleri - YAYINLADI - kitaplar (1:N) -->
-        <mxCell id="rel_yay_kit1" value="1" edge="1" parent="1" source="yayin_evleri_entity" target="yayinladi_rel">
+        <mxCell id="rel_yay_kit1" edge="1" parent="1" source="yayin_evleri_entity" target="yayinladi_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_yay_kit2" value="N" edge="1" parent="1" source="yayinladi_rel" target="kitaplar_entity">
+        <mxCell id="rel_yay_kit2" edge="1" parent="1" source="yayinladi_rel" target="kitaplar_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- uyeler - ALIYOR - odunc_islemleri (1:N) -->
-        <mxCell id="rel_uye_odi1" value="1" edge="1" parent="1" source="uyeler_entity" target="aliyor_rel">
+        <mxCell id="rel_uye_odi1" edge="1" parent="1" source="uyeler_entity" target="aliyor_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_uye_odi2" value="N" edge="1" parent="1" source="aliyor_rel" target="odunc_islemleri_entity">
+        <mxCell id="rel_uye_odi2" edge="1" parent="1" source="aliyor_rel" target="odunc_islemleri_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- personel - ODUNC_VERIYOR - odunc_islemleri (1:N) -->
-        <mxCell id="rel_per_odi1" value="1" edge="1" parent="1" source="personel_entity" target="odunc_veriyor_rel">
+        <mxCell id="rel_per_odi1" edge="1" parent="1" source="personel_entity" target="odunc_veriyor_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_per_odi2" value="N" edge="1" parent="1" source="odunc_veriyor_rel" target="odunc_islemleri_entity">
+        <mxCell id="rel_per_odi2" edge="1" parent="1" source="odunc_veriyor_rel" target="odunc_islemleri_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- kitaplar - ODUNC_ALIR - odunc_islemleri (1:N) -->
-        <mxCell id="rel_kit_odi1" value="1" edge="1" parent="1" source="kitaplar_entity" target="odunc_alir_rel">
+        <mxCell id="rel_kit_odi1" edge="1" parent="1" source="kitaplar_entity" target="odunc_alir_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_kit_odi2" value="N" edge="1" parent="1" source="odunc_alir_rel" target="odunc_islemleri_entity">
+        <mxCell id="rel_kit_odi2" edge="1" parent="1" source="odunc_alir_rel" target="odunc_islemleri_entity" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- odunc_islemleri - GECIKTI - gecikenler (1:1) -->
-        <mxCell id="rel_odi_gec1" value="1" edge="1" parent="1" source="odunc_islemleri_entity" target="gecikti_rel">
+        <mxCell id="rel_odi_gec1" edge="1" parent="1" source="odunc_islemleri_entity" target="gecikti_rel" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="rel_odi_gec2" value="1" edge="1" parent="1" source="gecikti_rel" target="gecikenler_entity">
+        <mxCell id="rel_odi_gec2" edge="1" parent="1" source="gecikti_rel" target="gecikenler_entity" value="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Legend -->
-        <mxCell id="legend_title" value="LEGEND - Chen Notation" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fillColor=#f5f5f5;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="670" width="280" height="30" as="geometry" />
+        <mxCell id="legend_title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fillColor=#f5f5f5;rounded=1;" value="LEGEND - Chen Notation" vertex="1">
+          <mxGeometry height="30" width="280" x="1100" y="670" as="geometry" />
         </mxCell>
-
-        <mxCell id="legend_entity" value="Dikdörtgen = Entity (Varlık/Tablo)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=2;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="710" width="280" height="35" as="geometry" />
+        <mxCell id="legend_entity" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3e5fc;strokeColor=#01579b;strokeWidth=2;fontSize=10;" value="Dikdörtgen = Entity (Varlık/Tablo)" vertex="1">
+          <mxGeometry height="35" width="280" x="1100" y="710" as="geometry" />
         </mxCell>
-
-        <mxCell id="legend_rel" value="Elmas = Relationship (İlişki)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=1.5;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="755" width="280" height="35" as="geometry" />
+        <mxCell id="legend_rel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f57f17;strokeWidth=1.5;fontSize=10;" value="Elmas = Relationship (İlişki)" vertex="1">
+          <mxGeometry height="35" width="280" x="1100" y="755" as="geometry" />
         </mxCell>
-
-        <mxCell id="legend_attr" value="Elips = Attribute (Öznitelik/Sütun)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="800" width="280" height="35" as="geometry" />
+        <mxCell id="legend_attr" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#558b2f;strokeWidth=1;fontSize=10;" value="Elips = Attribute (Öznitelik/Sütun)" vertex="1">
+          <mxGeometry height="35" width="280" x="1100" y="800" as="geometry" />
         </mxCell>
-
       </root>
     </mxGraphModel>
   </diagram>
