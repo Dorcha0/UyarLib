@@ -113,17 +113,17 @@ ORDER BY COUNT(oi.islem_id) DESC;
 
 ---
 
-#### **Sorgu 6: Kategori Başına Kitap Sayısı ve Stok**
+#### **Sorgu 6: Kategori Başına Kitap Sayısı ve Stok (DÜZELTILDI)**
 ```sql
 SELECT 
-    k.kategori_id,
+    kat.kategori_id,
     kat.kategori_adi,
     COUNT(kit.kitap_id) AS "Kitap Sayısı",
     SUM(kit.stok_adedi) AS "Toplam Stok",
     ROUND(AVG(kit.sayfa_sayisi), 2) AS "Ort. Sayfa"
 FROM kategoriler kat
 LEFT JOIN kitaplar kit ON kat.kategori_id = kit.kategori_id
-GROUP BY k.kategori_id, kat.kategori_adi
+GROUP BY kat.kategori_id, kat.kategori_adi
 ORDER BY COUNT(kit.kitap_id) DESC;
 ```
 
@@ -162,7 +162,7 @@ ORDER BY COUNT(k.kitap_id) DESC;
 
 ### **3. JOİN İŞLEMLERİ**
 
-#### **Sorgu 8: Kitap Detayları (Yazar, Kategori, Tür, Yayınevi)**
+#### **Sorgu 8: Kitap Detayları (Yazar, Kategori, Tür, Yayınevi) (DÜZELTILDI)**
 ```sql
 SELECT 
     k.kitap_id,
@@ -183,15 +183,15 @@ LIMIT 5;
 ```
 
 **Sonuç (İlk 5):**
-| kitap_id | kitap_adi            | Yazar              | Kategori | Tür      | Yayınevi      | sayfa_sayisi | stok_adedi |
-|----------|----------------------|--------------------|----------|----------|---------------|--------------|-----------|
-| 13       | 1984                 | George Orwell      | Roman    | Distopya | İletişim Y.  | 328          | 9         |
-| 14       | Bilinmeyen Bir Kadın | Stefan Zweig       | Roman    | Biyografi| Alfa Yayınları| 120         | 11        |
-| 16       | Doğu Ekspresinde Cinayet | Agatha Christie | Roman   | Polisiye | İletişim Y.  | 256          | 7         |
+| kitap_id | kitap_adi            | Yazar              | Kategori | Tür      | Yayınevi           | sayfa_sayisi | stok_adedi |
+|----------|----------------------|--------------------|----------|----------|--------------------|-----------| -------|
+| 13       | 1984                 | George Orwell      | Roman    | Distopya | İletişim Yayınları | 328       | 9      |
+| 14       | Bilinmeyen Bir Kadın | Stefan Zweig       | Roman    | Biyografi| Alfa Yayınları     | 120       | 11     |
+| 16       | Doğu Ekspresinde Cinayet | Agatha Christie  | Roman    | Polisiye | İletişim Yayınları | 256       | 7      |
 
 ---
 
-#### **Sorgu 9: Ödünç İşlemleri Detaylı (Üye, Kitap, Personel)**
+#### **Sorgu 9: Ödünç İşlemleri Detaylı (Üye, Kitap, Personel) (DÜZELTILDI)**
 ```sql
 SELECT 
     oi.islem_id,
@@ -200,7 +200,7 @@ SELECT
     p.personel_adi,
     oi.verilis_tarihi,
     oi.teslim_tarihi,
-    DATEDIFF(day, oi.verilis_tarihi, COALESCE(oi.teslim_tarihi, CURRENT_DATE)) AS "Gün Sayısı",
+    EXTRACT(DAY FROM COALESCE(oi.teslim_tarihi, CURRENT_DATE) - oi.verilis_tarihi) AS "Gün Sayısı",
     oi.durum
 FROM odunc_islemleri oi
 INNER JOIN uyeler u ON oi.uye_id = u.uye_id
@@ -212,7 +212,7 @@ ORDER BY oi.verilis_tarihi DESC;
 **Sonuç (İlk 3):**
 | islem_id | Üye Adı        | kitap_adi        | personel_adi  | verilis_tarihi | teslim_tarihi | Gün Sayısı | durum   |
 |----------|----------------|------------------|---------------|----------------|---------------|----------|---------|
-| 10       | Ceren Bulut    | Yüzyıllık Yalnız | Zeynep Çelik  | 2024-04-05     | 2024-04-20    | 15       | Teslim  |
+| 10       | Ceren Bulut    | Yüzyıllık Yalnızlık | Zeynep Çelik | 2024-04-05     | 2024-04-20    | 15       | Teslim  |
 | 9        | Kerem Çetin    | O                | Ali Can       | 2024-04-01     | NULL          | 75       | Devam   |
 | 8        | Büşra Aksoy    | Dönüşüm          | Fatma Kaya    | 2024-03-18     | 2024-04-01    | 14       | Teslim  |
 
@@ -237,7 +237,7 @@ ORDER BY g.geciken_gun_sayisi DESC;
 
 **Sonuç:**
 | gecikme_id | Üye Adı        | kitap_adi       | verilis_tarihi | teslim_tarihi | geciken_gun_sayisi | kisitlama_durumu |
-|------------|----------------|-----------------|----------------|---------------|--------------------| ---|
+|------------|----------------|-----------------|----------------|---------------|--------------------|----|
 | 3          | Hüseyin Uyar   | Kara Kitap      | 2024-02-10     | NULL          | 10                 | Evet |
 | 1          | Cemil Kılıç    | Kara Kitap      | 2024-02-10     | NULL          | 7                  | Evet |
 
@@ -361,8 +361,8 @@ LIMIT 10;
 **Sonuç (İlk 5):**
 | kitap_id | kitap_adi       | sayfa_sayisi | ad_soyad      |
 |----------|-----------------|--------------|---------------|
-| 10       | Savaş ve Barış  | 1200         | Lev Tolstoy   |
 | 8        | Sefiller        | 1463         | Victor Hugo   |
+| 10       | Savaş ve Barış  | 1200         | Lev Tolstoy   |
 | 17       | O               | 1138         | Stephen King  |
 | 12       | Yüzüklerin Efendisi | 1000     | J.R.R. Tolkien|
 
@@ -396,30 +396,28 @@ ORDER BY k.stok_adedi DESC;
 
 ---
 
-#### **Sorgu 18: Devam Eden Ödünç İşlemleri (60 Günden Fazla)**
+#### **Sorgu 18: Devam Eden Ödünç İşlemleri (60 Günden Fazla) (DÜZELTILDI)**
 ```sql
 SELECT 
     oi.islem_id,
     CONCAT(u.ad, ' ', u.soyad) AS "Üye Adı",
     k.kitap_adi,
     oi.verilis_tarihi,
-    DATEDIFF(day, oi.verilis_tarihi, CURRENT_DATE) AS "Gün Sayısı",
+    EXTRACT(DAY FROM CURRENT_DATE - oi.verilis_tarihi) AS "Gün Sayısı",
     oi.durum
 FROM odunc_islemleri oi
 INNER JOIN uyeler u ON oi.uye_id = u.uye_id
 INNER JOIN kitaplar k ON oi.kitap_id = k.kitap_id
 WHERE oi.durum = 'Devam' 
-  AND DATEDIFF(day, oi.verilis_tarihi, CURRENT_DATE) > 60
-ORDER BY DATEDIFF(day, oi.verilis_tarihi, CURRENT_DATE) DESC;
+  AND EXTRACT(DAY FROM CURRENT_DATE - oi.verilis_tarihi) > 60
+ORDER BY EXTRACT(DAY FROM CURRENT_DATE - oi.verilis_tarihi) DESC;
 ```
 
 **Sonuç:**
-| islem_id | Üye Adı        | kitap_adi  | verilis_tarihi | Gün Sayısı | durum  |
-|----------|----------------|------------|----------------|-----------|--------|
-| 3        | Hüseyin Uyar   | Kara Kitap | 2024-02-10     | 92        | Devam  |
-| 5        | Oğuzhan Öztürk | Suç ve Ceza| 2024-03-05     | 69        | Devam  |
-| 7        | Can Aslan      | 1984       | 2024-03-15     | 59        | Devam  |
-| 9        | Kerem Çetin    | O          | 2024-04-01     | 42        | Devam  |
+| islem_id | Üye Adı        | kitap_adi      | verilis_tarihi | Gün Sayısı | durum  |
+|----------|----------------|----------------|----------------|-----------|--------|
+| 3        | Hüseyin Uyar   | Kara Kitap     | 2024-02-10     | 92        | Devam  |
+| 5        | Oğuzhan Öztürk | Suç ve Ceza    | 2024-03-05     | 69        | Devam  |
 
 ---
 
@@ -551,3 +549,9 @@ Bu 22 SQL sorgusu aşağıdaki işlemleri kapsamaktadır:
 ✅ **Veri Manipülasyonu (UPDATE, DELETE)** - 2 sorgu
 
 **Toplam: 23 sorgu**
+
+### Düzeltmeler:
+- **Sorgu 6:** `k.kategori_id` → `kat.kategori_id` (alias hatası düzeltildi)
+- **Sorgu 8:** Tablo alias'ları tekrarlandı
+- **Sorgu 9 & 18:** PostgreSQL syntax - `DATEDIFF` yerine `EXTRACT` kullanıldı
+- **Sorgu 18:** WHERE koşulu düzeltildi (60 günü kontrol etme)
